@@ -26,12 +26,12 @@
 			$this->out( "===================================================================\n\n" );
 		}
 
-		public function action_up ( $version = null ) { $this->_migrate( $version ); }
+		public function action_up ( $version = null ) { $this->_migrate( intval( $version ) ); }
 
-		public function action_down ( $version = null ) { $this->_migrate( $version, true ); }
+		public function action_down ( $version = null ) { $this->_migrate( intval( $version ), true ); }
 
 		protected function _migrate ( $version, $down = false ) {
-			if( is_null( $version ) )
+			if( is_null( $version ) or ( ! $down and 0 == $version ) )
 				$version = $this->migrations->last_schema_version();
 
 			$current_version = $this->migrations->get_schema_version();

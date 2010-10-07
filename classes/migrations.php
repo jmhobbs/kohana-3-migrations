@@ -114,8 +114,9 @@
 			$db = Database::instance( $this->group );
 
 			foreach( $queries as $query ) {
+				$query = trim( $query );
 				if( empty( $query ) ) { continue; }
-				$db->query( $query );
+				$db->query( Database::UPDATE, $query, false );
 			}
 
 			return "Migrated: " . basename( $file ) . "\n";
