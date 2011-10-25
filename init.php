@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-Route::set('migration', '<controller>(/<action>(/<id>))')
+Route::set('migrations', 'migrations(/<action>(/<id>))')
     ->defaults(array(
-        'controller' => 'migration',
+        'controller' => 'migrations',
     )); 
