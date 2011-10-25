@@ -5,7 +5,7 @@
 
 		public function __construct () {
 			// Command line access ONLY
-			if( 'cli' != PHP_SAPI ) { die( 'oops' ); url::redirect( '/' ); }
+			if( 'cli' != PHP_SAPI ) { die( 'oops' ); $this->request->redirect( '/' ); }
 			$this->stdout = fopen( 'php://stdout', 'w' );
 			$this->out( "\n=======================[ Kohana Migrations ]=======================\n\n" );
 			$this->migrations = new Migrations();
