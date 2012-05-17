@@ -109,7 +109,7 @@
 		public function run_migration ( $file ) {
 
 			$contents = file_get_contents( $file );
-			$queries = explode( ";\n", $contents );
+			$queries = preg_split( "/;\r?\n/", $contents );
 
 			$db = Database::instance( $this->group );
 
