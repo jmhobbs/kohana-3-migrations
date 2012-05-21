@@ -92,9 +92,15 @@ Then you can run them from the command line:
 
 	===================================================================
 
+# Authors
+
+  * [John Hobbs (jmhobbs)](https://github.com/jmhobbs)
+  * [Kevin Warrington (dubbs)](https://github.com/dubbs)
+
+
 # License
 
-	Copyright (c) 2010 John Hobbs
+	Copyright (c) 2010-2012
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
